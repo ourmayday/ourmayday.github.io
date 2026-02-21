@@ -884,3 +884,20 @@ body {
   transform: scale(1.04);
 }
 
+@media (min-width: 700px) {
+  .vendors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .vendors-grid .vendor-card:nth-child(3) {
+    grid-column: 1 / -1;   /* span 2 kolom */
+    max-width: 420px;      /* supaya tidak terlalu lebar */
+  }
+}
+
+.vendors-grid .vendor-card:nth-child(3) {
+  margin-left: auto;
+  margin-right: auto;
+}
